@@ -6,19 +6,23 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import precision_score
 import numpy as np
 
-# Isolation Forest
+print("Old Shape: ", df.shape)
 
-X = df[['x', 'y', 'z']]
-y = []
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+q3, q1 = np.percentile(df['z'], [75, 25])
+iqr = q3 - q1
 
-clf = IsolationForest(random_state=0)
-clf.fit(X_train)
-y_pred = clf.predict(X_test)
+# Upper bound
+upper = np.where(df['z'] >= (q3+1.5*iqr))
+#print('upper: ')
+#print(upper[0])
 
-pred = pd.DataFrame({'pred': y_pred})
-pred['y_pred'] = np.where(pred['pred'] == -1, 1, 0)
-y_pred = pred['y_pred']
-print("Precision:", precision_score(y_test, y_pred))
+# Lower bound
+lower = np.where(df['z'] <= (q1-1.5*iqr))
+#print('lower: ')
+#print(lower[0])
 
+df.drop(upper[0], inplace = True)
+df.drop(lower[0], inplace = True)
+
+print("New Shape: ", df.shape)
