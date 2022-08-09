@@ -17,3 +17,11 @@ def read_file():
             count = count + 1
     file.close()
     return pd.DataFrame(data=lst, columns=['x', 'y', 'z'])
+
+
+def split_dataframe(df, chunk_size):
+    chunks = list()
+    num_chunks = len(df) // chunk_size + 1
+    for i in range(num_chunks):
+        chunks.append(df[i*chunk_size:(i+1)*chunk_size])
+    return chunks
