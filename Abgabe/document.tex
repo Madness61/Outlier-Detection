@@ -1,0 +1,96 @@
+\documentclass{report}
+
+\usepackage[utf8]{inputenc} % Charakter-Kodierung
+\usepackage[german]{babel} % Sprache
+
+\usepackage[table,xcdraw]{xcolor} % Tabellen Farben
+\usepackage{tabularx} % Dynamische Tabellenbreite
+\usepackage{tcolorbox} % Graue Boxen
+\usepackage{hyperref} % url Umgebung
+\usepackage{todonotes} % Notizen
+\usepackage{natbib} % Bibliographie
+\usepackage{fancyhdr} % Header und Footer
+\usepackage{multirow} % Multizeile
+\usepackage{geometry} % Page layout
+\usepackage{color} % Text Farben
+
+% Page layout
+\geometry{
+	bottom=3.5cm,
+	headheight=180pt
+}
+
+% Nummerierung der ersten Seiten verhindern
+\pagenumbering{gobble}
+
+% Bibstyle
+\bibliographystyle{plain}
+
+% Header / Footer
+\fancypagestyle{plain}{
+	\fancyhf{}% Clear header/footer
+	\fancyhead[R]{\includegraphics[width=4cm]{img/cau-logo-2017}} % Rechter header
+	\fancyhead[L]{\leftmark} % Linker header
+	\fancyfoot[R]{\thepage} % Rechter footer
+}
+\pagestyle{plain}
+
+\renewcommand{\headrulewidth}{0.5pt} % Unnötige Informationen der Kapitelangabe
+\renewcommand{\footrulewidth}{0.2pt} % entfernen
+\renewcommand{\chaptermark}[1]{\markboth{{#1}}{}}
+
+
+
+
+% Zahlen für Fußnoten
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+
+% Titelseite
+
+\title{
+	\vspace*{-3cm}
+	Bachelorarbeit\\
+	Einsatz von Prozessanalysen für maschinelle Lernverfahren zur
+	Anomalieerkennung in Multibeam Daten\\
+	-\\
+	\color{gray}
+	Sommersemester 2022\\
+	\vspace*{5mm}
+	{Erstbetreuer: Tobias Ziolkowski}
+	\author{Manuel Krebs}
+}
+
+\date{\today}
+
+
+
+% Dokument
+
+\begin{document}
+	\maketitle	
+	\tableofcontents
+	
+	\chapter{Einführung}\label{chp:einführung}
+	\pagenumbering{arabic} % Nummerierung starten
+	\input{kapitel/einführung}
+	
+	\chapter{Literaturübersicht}\label{chp:literaturübersicht}
+	\input{kapitel/literaturübersicht}
+	
+	\chapter{Methodik}\label{chp:methodik}
+	\input{kapitel/methodik}
+	
+	\chapter{Ergebnisse}\label{chp:ergebnisse}
+	\input{kapitel/ergebnisse}
+	
+	\chapter{Diskussion}\label{chp:diskussion}
+	\input{kapitel/diskussion}
+	
+	\chapter{Fazit}\label{chp:fazit}
+	\input{kapitel/fazit}
+	
+	\bibliography{references}
+	\pagenumbering{gobble} % Nummerierung deaktivieren
+	
+\end{document}
