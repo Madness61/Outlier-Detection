@@ -13,7 +13,6 @@ def IQR_Method(df):
     # Lower bound
     lower = df[df['z'] <= (q1 - 1.5 * iqr)]
 
-    frames = [lower, upper]
-    index = pd.concat(frames).index.tolist()
-    return index
+    anomaly = pd.concat([lower, upper])
+    return anomaly
 

@@ -4,12 +4,11 @@ from sklearn.neighbors import LocalOutlierFactor
 
 def loOuFa1(df):
 
-    lof = LocalOutlierFactor(n_neighbors=60)
+    lof = LocalOutlierFactor()
     model = lof.fit_predict(df)
     anomaly = df.loc[model == -1]
 
-    index = anomaly.index.tolist()
-    return index
+    return anomaly
 
 
 def loOuFa2(df):
@@ -21,4 +20,4 @@ def loOuFa2(df):
     anomaly = df.loc[lof <= thresh]
 
     index = anomaly.index.tolist()
-    return index
+    return anomaly

@@ -12,12 +12,11 @@ def iforest(df):
     model = IsolationForest(contamination='auto', n_estimators=100, max_features=0.4)
     model.fit(df[['z']])
 
-    df['anomaly_scores'] = model.decision_function(df[['z']])
+    df['anomaly_score'] = model.decision_function(df[['z']])
     df['anomaly'] = model.predict(df[['z']])
 
     no_anomaly = df.loc[df['anomaly'] == 1]
     anomaly = df.loc[df['anomaly'] == -1]
 
-    index = anomaly.index.tolist()
-    return index
+    return pd.DataFrame(data=df, columns=['x', 'y', 'z', 'anomaly_score', 'anomaly'])
 

@@ -6,4 +6,4 @@ def oneClassSVM(df):
     model = clf.predict(df)
     anomaly = df.loc[model == -1]
     index = anomaly.index.tolist()
-    return index
+    return anomaly

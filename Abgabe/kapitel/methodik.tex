@@ -1,5 +1,40 @@
-\section{Boxplot}
 \section{Interquartilsabstand}
+Der Interquartilsabstand (im folgenden mit IQR angekürzt) ist ein Streuungsmaß, welcher in statistischen Analysen dabei hilft, durch Verteilungen Rückschlüsse über einen Datensatz zu ziehen. Visuell werden diese meist durch einen Boxplot dargestellt, welche zu den am weitesten verbreiteten Werkzeugen in der statistischen Praxis, insbesondere in der Phase der explorativen Datenanalyse \cite{dovoedoBoxplotBasedOutlierDetection2015}.
+\subsection{Funktionsweise}
+Zunächst wird das erste und das dritte Quartil berechnet. Der IQR bildet sich nun aus der Differenz des der beiden Quartile, also IQR = Quartil 3 - Quartil 1. Um dies als graphische Repräsentation zu verdeutlichen zeigt Grafik \ref{fig:boxplot_example} einen Boxplot, welcher die 'z'-Koordinate der ersten 1000 Messdaten veranschaulicht. Der IQR lässt sich nun durch die blau eingefärbte Fläche zeigen, welche 50 Prozent der Messdaten enthält. Alle Messwerte, welche außerhalb oberen und unteren Grenze liegen, lassen sich nun als potenzielle Outlier identifizieren. Diese Grenzen werden typischerweise auf das 1,5-fache des IQR gesetzt. Die untere Grenze lässt sich also durch Quartil 1 - (1.5 * IQR) und die obere Grenze durch Quartil 3 + (1.5 * IQR) berechnen \cite{vinuthaDetectionOutliersUsing2018}. Wie in der Grafik \ref{fig:boxplot_example} nun zu erkennen ist, befinden sich einige der Messwerte nur knapp außerhalb der Grenzen. bei den Werten weit außerhalb der Grenzen ist die Wahrscheinlichkeit am höchsten, dass diese Ausreißer sind.
+
+\begin{figure}[h!]
+	\includegraphics[width=\textwidth]{img/boxplot_example.png}
+	\caption{Example Boxplot}
+	\label{fig:boxplot_example}
+\end{figure}
+
+\FloatBarrier
+
+\subsection{Anwendung}
+Bevor die Methodik angewendet werden kann muss der Datensatz angepasst werden. Dies geschieht mithilfe dem zuvor beschrieben Ansatz des Moving-Window-Patterns. Nachdem der Datensatz aufgeteilt wurde, wird die Methode mit den einzelnen Chunks aufgerufen. Hier hat man nun mehrere Möglichkeiten: 
+\begin{itemize}
+	\item Händische Identifizierung von Outliern mithilfe der Ausgabe mehreren Boxplots.
+	\item Berechnung der oberen und unteren Grenze und automatische Filterung aller Werte, welche sich außerhalb befinden.
+\end{itemize}
+
+\newpage
+
 \section{Isolation Forest}
+Zhang, J., Zulkernine, M.: Anomaly based network intrusion detection with unsupervised outlier detection
+\subsection{Funktionsweise}
+\subsection{Anwendung}
+
+\newpage
+
 \section{Local Outlier Factor}
+Jabez, J., Muthukumar, B.: Intrusion detection system: anomaly detection using outlier detection approach. ICCC, 338–346 (2015)
+\subsection{Funktionsweise}
+\subsection{Anwendung}
+
+\newpage
+
 \section{One-Class Support Vector Machine}
+\subsection{Funktionsweise}
+\subsection{Anwendung}
+

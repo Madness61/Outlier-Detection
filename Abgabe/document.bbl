@@ -1,3 +1,18 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{dovoedoBoxplotBasedOutlierDetection2015}
+Y.~H. Dovoedo and S.~Chakraborti.
+\newblock Boxplot-{{Based Outlier Detection}} for the {{Location-Scale
+  Family}}.
+\newblock 44(6):1492--1513.
+
+\bibitem{vinuthaDetectionOutliersUsing2018}
+H.~P. Vinutha, B.~Poornima, and B.~M. Sagar.
+\newblock Detection of {{Outliers Using Interquartile Range Technique}} from
+  {{Intrusion Dataset}}.
+\newblock In Suresh~Chandra Satapathy, Joao Manuel~R.S. Tavares, Vikrant
+  Bhateja, and J.~R. Mohanty, editors, {\em Information and {{Decision
+  Sciences}}}, volume 701 of {\em Advances in {{Intelligent Systems}} and
+  {{Computing}}}, pages 511--518. {Springer Singapore}.
 
 \end{thebibliography}

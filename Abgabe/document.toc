@@ -2,11 +2,18 @@
 \contentsline {chapter}{\numberline {1}Einführung}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Literaturübersicht}{2}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Methodik}{3}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Boxplot}{3}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Interquartilsabstand}{3}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Isolation Forest}{3}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Local Outlier Factor}{3}{section.3.4}%
-\contentsline {section}{\numberline {3.5}One-Class Support Vector Machine}{3}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Ergebnisse}{4}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Diskussion}{5}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Fazit}{6}{chapter.6}%
+\contentsline {section}{\numberline {3.1}Interquartilsabstand}{3}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Funktionsweise}{3}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Anwendung}{4}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Isolation Forest}{5}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Funktionsweise}{5}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Anwendung}{5}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Local Outlier Factor}{6}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Funktionsweise}{6}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Anwendung}{6}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}One-Class Support Vector Machine}{7}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Funktionsweise}{7}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Anwendung}{7}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}Ergebnisse}{8}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Diskussion}{9}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Fazit}{10}{chapter.6}%

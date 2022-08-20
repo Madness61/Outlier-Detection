@@ -25,3 +25,20 @@ def split_dataframe(df, chunk_size):
     for i in range(num_chunks):
         chunks.append(df[i*chunk_size:(i+1)*chunk_size])
     return chunks
+
+
+def read_accepted():
+    lst = []
+    with open(r"C:/Users/manue/OneDrive/Desktop/MSM88_accepted.txt") as file:
+        count = 0
+        for line in file:
+            # Can delete, to look at full dataset.
+            if count >= 10000:
+                break
+
+            xyz = [float(x) for x in line.split(";")]
+            lst.append(xyz)
+            count = count + 1
+
+    file.close()
+    return pd.DataFrame(data=lst, columns=['x', 'y', 'z'])
