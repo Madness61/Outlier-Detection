@@ -1,15 +1,16 @@
 \section{Interquartilsabstand}
 Der Interquartilsabstand (im folgenden mit IQR angekürzt) ist ein Streuungsmaß, welcher in statistischen Analysen dabei hilft, durch Verteilungen Rückschlüsse über einen Datensatz zu ziehen. Visuell werden diese meist durch einen Boxplot dargestellt, welche zu den am weitesten verbreiteten Werkzeugen in der statistischen Praxis, insbesondere in der Phase der explorativen Datenanalyse \cite{dovoedoBoxplotBasedOutlierDetection2015}.
 \subsection{Funktionsweise}
-Zunächst wird das erste und das dritte Quartil berechnet. Der IQR bildet sich nun aus der Differenz des der beiden Quartile, also IQR = Quartil 3 - Quartil 1. Um dies als graphische Repräsentation zu verdeutlichen zeigt Grafik \ref{fig:boxplot_example} einen Boxplot, welcher die 'z'-Koordinate der ersten 1000 Messdaten veranschaulicht. Der IQR lässt sich nun durch die blau eingefärbte Fläche zeigen, welche 50 Prozent der Messdaten enthält. Alle Messwerte, welche außerhalb oberen und unteren Grenze liegen, lassen sich nun als potenzielle Outlier identifizieren. Diese Grenzen werden typischerweise auf das 1,5-fache des IQR gesetzt. Die untere Grenze lässt sich also durch Quartil 1 - (1.5 * IQR) und die obere Grenze durch Quartil 3 + (1.5 * IQR) berechnen \cite{vinuthaDetectionOutliersUsing2018}. Wie in der Grafik \ref{fig:boxplot_example} nun zu erkennen ist, befinden sich einige der Messwerte nur knapp außerhalb der Grenzen. bei den Werten weit außerhalb der Grenzen ist die Wahrscheinlichkeit am höchsten, dass diese Ausreißer sind.
+Zunächst wird das erste und das dritte Quartil berechnet. Der IQR bildet sich nun aus der Differenz des der beiden Quartile, also IQR = Quartil 3 - Quartil 1. Um dies als graphische Repräsentation zu verdeutlichen zeigt Grafik \ref{fig:boxplot_example} einen Boxplot, welcher die 'z'-Koordinate der ersten 1000 Messdaten veranschaulicht. Der IQR lässt sich nun durch die blau eingefärbte Fläche zeigen, welche 50 Prozent der Messdaten enthält. Alle Messwerte, welche außerhalb oberen und unteren Grenze liegen, lassen sich nun als potenzielle Outlier identifizieren. Diese Grenzen werden typischerweise auf das 1,5-fache des IQR gesetzt. Die untere Grenze lässt sich also durch Quartil 1 - (1.5 * IQR) und die obere Grenze durch Quartil 3 + (1.5 * IQR) berechnen \cite{vinuthaDetectionOutliersUsing2018}. 
 
 \begin{figure}[h!]
 	\includegraphics[width=\textwidth]{img/boxplot_example.png}
-	\caption{Example Boxplot}
+	\caption[Beispiel eines Boxplots]{Beispiel eines Boxplots}
 	\label{fig:boxplot_example}
 \end{figure}
 
 \FloatBarrier
+Wie in der Grafik \ref{fig:boxplot_example} nun zu erkennen ist, befinden sich einige der Messwerte nur knapp außerhalb der Grenzen. bei den Werten weit außerhalb der Grenzen ist die Wahrscheinlichkeit am höchsten, dass diese Ausreißer sind.
 
 \subsection{Anwendung}
 Bevor die Methodik angewendet werden kann muss der Datensatz angepasst werden. Dies geschieht mithilfe dem zuvor beschrieben Ansatz des Moving-Window-Patterns. Nachdem der Datensatz aufgeteilt wurde, wird die Methode mit den einzelnen Chunks aufgerufen. Hier hat man nun mehrere Möglichkeiten: 
@@ -17,24 +18,39 @@ Bevor die Methodik angewendet werden kann muss der Datensatz angepasst werden. D
 	\item Händische Identifizierung von Outliern mithilfe der Ausgabe mehreren Boxplots.
 	\item Berechnung der oberen und unteren Grenze und automatische Filterung aller Werte, welche sich außerhalb befinden.
 \end{itemize}
-
+\subsection{Auswertung}
 \newpage
 
 \section{Isolation Forest}
-Zhang, J., Zulkernine, M.: Anomaly based network intrusion detection with unsupervised outlier detection
+Um Anomalien in Datensätzen zu erkennen werden meist erst normale Instanzen profiliert, anhand deren man dann nicht übereinstimmende Instanzen als Anomalien zu identifizieren \cite{liuIsolationForest2008}. Der Isolation Forest konzentriert sich hingegen auf das Erkennen der Anomalien selbst, indem es zunutze nimmt, dass Anomalien 1) die Minderheit des Datensatzes sind, und 2) sich die Attributwerte stark von denen normaler Instanzen unterscheidet. Sie sind somit "wenig und unterschiedlich"\cite{liuIsolationForest2008}. Isolation Forests basieren wie Random Forests auf Entscheidungsbäumen \colorbox{yellow}{QUELLE}. Und da es hier keine vordefinierten Labels gibt, handelt es sich um ein unüberwachtes Modell \colorbox{yellow}{QUELLE}.
 \subsection{Funktionsweise}
+Der Isolation Forest berechnet zu jeder Instanz einen Anomalie-Wert. Nach der zufälligen Auswahl eines Merkmals werden die Daten in einer Baumstruktur zufällig verarbeitet. Dies wird nun rekursiv fortgesetzt, bis alle Messwerte isoliert sind. Der Anomalie-Wert berechnet sich nun aus der Länge des Pfades zwischen der Wurzel und dem zu bewertenden Knoten. Anomalien werden daran erkannt, dass diese bereits nach wenigen Iterationen isoliert wurden und somit einen geringeren Anomalie-Wert besitzen als Knotenpunkte, die keine Outlier darstellen \colorbox{yellow}{QUELLE}..
 \subsection{Anwendung}
+
+
+\subsection{Vorteile}
+Firstly, building iTrees only need to select subset of the training set randomly, the research result show that the reasonable number of
+sub-samplings is set to 256, which is a relative small number and reduce the swamping and masking effects effectively. Secondly, iForest utilizes no distance or density measures to detect anomaly, this eliminates computational cost significantly compared to the distance-based methods and density-based methods. Thirdly, iForest has a linear time complexity with low constant and a low memory
+requirement. Last but not the least, iForest algorithm is based on the ensemble idea, even if the efficiency of some
+iTrees are not very high, the ensemble algorithm always can turn the weak algorithm into strong algorithm.
+%https://sci-hub.hkvisa.net/10.3182/20130902-3-cn-3020.00044
+
+\subsection{Auswertung}
+\subsection{Limits/Challenges?}
 
 \newpage
 
 \section{Local Outlier Factor}
-Jabez, J., Muthukumar, B.: Intrusion detection system: anomaly detection using outlier detection approach. ICCC, 338–346 (2015)
+Local Outlier Factor (fortgehend mit LOF abgekürzt) beschreibt die lokale Suche nach Anomalien. Die Methode beruht auf einer dichtebasierten Technik \cite{alghushairyReviewLocalOutlier2020}. Die Idee ist, jedem Objekt ein Ausreißergrad zuzuordnen, welcher davon Abhängig ist, wie isoliert besagtes Objekt in Bezug auf die umgebende Nachbarschaft ist \cite{breunigLOFIdentifyingDensitybased2000}. 
 \subsection{Funktionsweise}
 \subsection{Anwendung}
+\subsection{Auswertung}
+\subsection{Limits/Challenges?}
+%https://sci-hub.hkvisa.net/10.3390/bdcc5010001
 
 \newpage
 
 \section{One-Class Support Vector Machine}
 \subsection{Funktionsweise}
 \subsection{Anwendung}
-
+\subsection{Auswertung}

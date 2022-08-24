@@ -1,10 +1,27 @@
 \begin{thebibliography}{1}
 
+\bibitem{alghushairyReviewLocalOutlier2020}
+Omar Alghushairy, Raed Alsini, Terence Soule, and Xiaogang Ma.
+\newblock A {{Review}} of {{Local Outlier Factor Algorithms}} for {{Outlier
+  Detection}} in {{Big Data Streams}}.
+\newblock 5(1):1.
+
+\bibitem{breunigLOFIdentifyingDensitybased2000}
+Markus~M. Breunig, Hans-Peter Kriegel, Raymond~T. Ng, and Jörg Sander.
+\newblock {{LOF}}: Identifying density-based local outliers.
+\newblock 29(2):93--104.
+
 \bibitem{dovoedoBoxplotBasedOutlierDetection2015}
 Y.~H. Dovoedo and S.~Chakraborti.
 \newblock Boxplot-{{Based Outlier Detection}} for the {{Location-Scale
   Family}}.
 \newblock 44(6):1492--1513.
+
+\bibitem{liuIsolationForest2008}
+Fei~Tony Liu, Kai~Ming Ting, and Zhi-Hua Zhou.
+\newblock Isolation {{Forest}}.
+\newblock In {\em 2008 {{Eighth IEEE International Conference}} on {{Data
+  Mining}}}, pages 413--422. {IEEE}.
 
 \bibitem{vinuthaDetectionOutliersUsing2018}
 H.~P. Vinutha, B.~Poornima, and B.~M. Sagar.

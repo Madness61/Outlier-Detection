@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a916a39e-e119-4785-b2c4-ee5f7fe2a1b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/testing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testtetst.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moving window.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/Bachelorarbeit.bib" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/Bachelorarbeit.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Abgabe/document.aux" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Abgabe/document.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.bbl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Abgabe/document.blg" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.blg" afterDir="false" />
@@ -17,12 +17,11 @@
       <change beforePath="$PROJECT_DIR$/Abgabe/document.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Abgabe/document.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Abgabe/document.toc" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/img/se-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/kapitel/diskussion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/kapitel/diskussion.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Abgabe/kapitel/einführung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/kapitel/einführung.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/kapitel/ergebnisse.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/kapitel/ergebnisse.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Abgabe/kapitel/literaturübersicht.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/kapitel/literaturübersicht.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Abgabe/kapitel/methodik.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/kapitel/methodik.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/references.bib" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/IQR_Method.py" beforeDir="false" afterPath="$PROJECT_DIR$/IQR_Method.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LOF_Method.py" beforeDir="false" afterPath="$PROJECT_DIR$/LOF_Method.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OneClassSVM.py" beforeDir="false" afterPath="$PROJECT_DIR$/OneClassSVM.py" afterDir="false" />
@@ -69,27 +68,6 @@
   }
 }</component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="IQR_Method" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Outlier-Detection" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\manue\OneDrive\Desktop\Outlier-Detection\IQR_Method.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="LOF_Method" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Outlier-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,7 +89,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="isolation_forest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="bla" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Outlier-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -123,7 +101,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/isolation_forest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bla.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,6 +131,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="moving window" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Outlier-Detection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/moving window.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="readFile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Outlier-Detection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/readFile.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="testing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Outlier-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,34 +194,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testtetst" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Outlier-Detection" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testtetst.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.testing" />
-        <item itemvalue="Python.testtetst" />
-        <item itemvalue="Python.isolation_forest" />
-        <item itemvalue="Python.IQR_Method" />
+        <item itemvalue="Python.bla" />
+        <item itemvalue="Python.readFile" />
         <item itemvalue="Python.LOF_Method" />
+        <item itemvalue="Python.moving window" />
+        <item itemvalue="Python.testing" />
       </list>
     </recent_temporary>
   </component>

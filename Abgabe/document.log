@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.18)  20 AUG 2022 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.18)  22 AUG 2022 17:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -697,24 +697,24 @@ File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 ) (document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
 
 (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -741,7 +741,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 71.
+Package hyperref Info: Link coloring OFF on input line 72.
 
 (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -755,9 +755,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count314
 )
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
+LaTeX Info: Redefining \nameref on input line 72.
  (document.out) (document.out)
 \@outlinefile=\write4
 \openout4 = `document.out'.
@@ -798,11 +798,11 @@ LaTeX Info: Redefining \nameref on input line 71.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 73.
+(Font)              <12> on input line 74.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 73.
+(Font)              <8> on input line 74.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 73.
+(Font)              <6> on input line 74.
 [1
 
 {C:/Users/manue/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
@@ -815,7 +815,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `document.toc'.
 
-<img/cau-logo-2017.pdf, id=103, 273.14609pt x 91.04816pt>
+<img/cau-logo-2017.pdf, id=138, 273.14609pt x 91.04816pt>
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
 Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 75.
@@ -825,15 +825,78 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.75 	\chapter
-              {Einführung}\label{chp:einführung} [1
+l.75 	\listoffigures
+                     [1
 
- <./img/cau-logo-2017.pdf>]
-Kapitel 1.
-(kapitel/einführung.tex)
+ <./img/cau-logo-2017.pdf>] (document.lof)
+\tf@lof=\write6
+\openout6 = `document.lof'.
+
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 79.
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 77.
+(pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.77 	\chapter
+              {Einführung}\label{chp:einführung} [2
+
+]
+Kapitel 1.
+(kapitel/einführung.tex
+Underfull \hbox (badness 6510) in paragraph at lines 11--16
+[]\OT1/cmr/m/n/10 Outliers are the pat-terns which are not in the ran-ge of nor
+-mal be-ha-vi-or [[]]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--16
+\OT1/cmr/m/n/10 Moving win-dow pat-tern!
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--16
+\OT1/cmr/m/n/10 Chan-do-la, V., Ba-ner-jee, A., Ku-mar, V.: Out-lier de-tec-ti-
+on: a sur-vey
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
+\OT1/cmr/m/n/10 fu-ture for a bet-ter ba-thy-me-tric da-ta pro-ces-sing"
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+[]\OT1/cmr/m/n/10 Unterschied lo-ka-le und glo-ba-le Out-lier!
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+)
+File: img/cau-logo-2017.pdf Graphic file (type pdf)
+<use img/cau-logo-2017.pdf>
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 81.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
  [1
 
@@ -842,14 +905,14 @@ Kapitel 2.
 (kapitel/literaturübersicht.tex)
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 82.
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 84.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
  [2
 
 ]
 Kapitel 3.
 (kapitel/methodik.tex
-<img/boxplot_example.png, id=128, 462.528pt x 346.896pt>
+<img/boxplot_example.png, id=168, 462.528pt x 346.896pt>
 File: img/boxplot_example.png Graphic file (type png)
 <use img/boxplot_example.png>
 Package pdftex.def Info: img/boxplot_example.png  used on input line 7.
@@ -867,29 +930,29 @@ Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 12.
 ]
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 21.
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 22.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
  [4 <./img/boxplot_example.png>]
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 28.
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 41.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
  [5]
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 35.
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 51.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
  [6])
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 85.
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 87.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
  [7]
 Kapitel 4.
 (kapitel/ergebnisse.tex)
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 88.
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 90.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
  [8
 
@@ -898,7 +961,7 @@ Kapitel 5.
 (kapitel/diskussion.tex)
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 91.
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 93.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
  [9
 
@@ -914,28 +977,28 @@ Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 1.
 ])
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 97.
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 99.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.97 \end{document}
+l.99 \end{document}
                     [1
 
 ] (document.aux)
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 800F26CA925D396069552120CC5A40AF;2200.
+(rerunfilecheck)             Checksum: 9749D4A73C7D8C8FEE3C227E048D538D;3054.
  ) 
 Here is how much of TeX's memory you used:
- 23747 strings out of 478659
- 462438 string characters out of 2845920
- 746110 words of memory out of 3000000
- 41405 multiletter control sequences out of 15000+600000
+ 23790 strings out of 478659
+ 463412 string characters out of 2845920
+ 748163 words of memory out of 3000000
+ 41434 multiletter control sequences out of 15000+600000
  409578 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,15n,104p,1137b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,15n,104p,891b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\manue\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -944,9 +1007,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/manue/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/manue/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on document.pdf (13 pages, 146518 bytes).
+Output written on document.pdf (14 pages, 161148 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 263 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
+ 223 words of extra memory for PDF output out of 10000 (max. 10000000)
 

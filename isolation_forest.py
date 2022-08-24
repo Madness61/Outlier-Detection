@@ -13,10 +13,10 @@ def iforest(df):
     model.fit(df[['z']])
 
     df['anomaly_score'] = model.decision_function(df[['z']])
-    df['anomaly'] = model.predict(df[['z']])
+    df['iforest'] = model.predict(df[['z']])
 
-    no_anomaly = df.loc[df['anomaly'] == 1]
-    anomaly = df.loc[df['anomaly'] == -1]
+    no_anomaly = df.loc[df['iforest'] == 1]
+    anomaly = df.loc[df['iforest'] == -1]
 
-    return pd.DataFrame(data=df, columns=['x', 'y', 'z', 'anomaly_score', 'anomaly'])
+    return pd.DataFrame(data=df, columns=['x', 'y', 'z', 'anomaly_score', 'iforest'])
 
