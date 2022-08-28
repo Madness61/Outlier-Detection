@@ -6,17 +6,17 @@ import pandas as pd
 # Use Spark for large Datasets!
 # https://blog.paperspace.com/anomaly-detection-isolation-forest/
 def iforest(df):
-    pd.options.mode.chained_assignment = None
-    z = df['z'].value_counts().index
+    new_df = df.copy()
+    z = new_df['z'].value_counts().index
 
     model = IsolationForest(contamination='auto', n_estimators=100, max_features=0.4)
-    model.fit(df[['z']])
+    model.fit(new_df[['z']])
 
-    df['anomaly_score'] = model.decision_function(df[['z']])
-    df['iforest'] = model.predict(df[['z']])
+    new_df['ifor-Score'] = model.decision_function(new_df[['z']])
+    new_df['ifor-Outlier'] = model.predict(new_df[['z']])
 
-    no_anomaly = df.loc[df['iforest'] == 1]
-    anomaly = df.loc[df['iforest'] == -1]
+    # no_anomaly = df.loc[df['iforest'] == 1]
+    # anomaly = df.loc[df['iforest'] == -1]
 
-    return pd.DataFrame(data=df, columns=['x', 'y', 'z', 'anomaly_score', 'iforest'])
+    return new_df
 

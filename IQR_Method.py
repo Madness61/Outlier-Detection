@@ -15,8 +15,8 @@ def IQR_Method(df):
     anomaly = pd.concat([lower, upper])
     df_diff = pd.concat([df, anomaly]).drop_duplicates(keep=False)
 
-    anomaly['iqr'] = -1
-    df_diff['iqr'] = 1
+    anomaly['iqr-Outlier'] = -1
+    df_diff['iqr-Outlier'] = 1
 
     together = pd.concat([anomaly, df_diff])
     together = together.sort_values(by=['x'])

@@ -7,13 +7,14 @@ import pandas as pd
 
 
 def loOuFa1(df):
-    pd.options.mode.chained_assignment = None
-    model1 = LocalOutlierFactor(n_neighbors=10)
-    y_pred = model1.fit_predict(df)
+    new_df = df.copy()
+    model = LocalOutlierFactor(n_neighbors=10)
+    outlier = model.fit_predict(new_df)
+    lof = model.negative_outlier_factor_
+    new_df['lof-Score'] = lof
+    new_df['lof-Outlier'] = outlier
+    # the lowest 3 percent of score values as the anomalies.
+    # thresh = quantile(lof, .03)
 
-    #outlier_index = where(y_pred == -1)
-    #outlier_values = df.iloc[outlier_index]
-
-    df['lof'] = y_pred
-    return df
+    return new_df
 

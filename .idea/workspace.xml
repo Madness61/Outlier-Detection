@@ -5,29 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a916a39e-e119-4785-b2c4-ee5f7fe2a1b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/moving window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/all.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/Bachelorarbeit.bib" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/Bachelorarbeit.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/document.aux" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/document.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.bbl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/document.blg" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.blg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/document.log" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/document.out" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/document.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/document.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/document.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/document.toc" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/document.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/kapitel/diskussion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/kapitel/diskussion.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/kapitel/einführung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/kapitel/einführung.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/kapitel/ergebnisse.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/kapitel/ergebnisse.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/kapitel/literaturübersicht.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/kapitel/literaturübersicht.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/kapitel/methodik.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/kapitel/methodik.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IQR_Method.py" beforeDir="false" afterPath="$PROJECT_DIR$/IQR_Method.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LOF_Method.py" beforeDir="false" afterPath="$PROJECT_DIR$/LOF_Method.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OneClassSVM.py" beforeDir="false" afterPath="$PROJECT_DIR$/OneClassSVM.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/isolation_forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/isolation_forest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw.feather" beforeDir="false" afterPath="$PROJECT_DIR$/raw.feather" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/readFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/together_combined.feather" beforeDir="false" afterPath="$PROJECT_DIR$/together_combined.feather" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +45,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
@@ -67,8 +56,8 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="LOF_Method" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.eveltlogGenerater (1)">
+    <configuration name="continue" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Outlier-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -76,11 +65,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Abgabe" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LOF_Method.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Abgabe/continue.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -89,7 +78,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="bla" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="dfGen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Outlier-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -101,7 +90,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bla.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dfGen.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="eveltlogGenerater (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Outlier-Detection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eveltlogGenerater.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="eveltlogGenerater" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Outlier-Detection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\manue\OneDrive\Desktop\Outlier-Detection\eveltlogGenerater.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,27 +162,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="moving window" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Outlier-Detection" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/moving window.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="readFile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Outlier-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -173,34 +183,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Outlier-Detection" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.bla" />
+        <item itemvalue="Python.eveltlogGenerater (1)" />
+        <item itemvalue="Python.dfGen" />
+        <item itemvalue="Python.eveltlogGenerater" />
+        <item itemvalue="Python.continue" />
         <item itemvalue="Python.readFile" />
-        <item itemvalue="Python.LOF_Method" />
-        <item itemvalue="Python.moving window" />
-        <item itemvalue="Python.testing" />
       </list>
     </recent_temporary>
   </component>
@@ -225,5 +214,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
