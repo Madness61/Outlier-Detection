@@ -1,10 +1,14 @@
+import os
+
+import datetime as dt
 import pandas as pd
 from IQR_Method import IQR_Method
-from isolation_forest import iforest
-from LOF_Method import loOuFa1
+from isolation_forest import iforest, backup
+from LOF_Method import lof
 from OneClassSVM import oneClassSVM
 from Boxplot import boxplot
 import numpy as np
+from sklearn.metrics import accuracy_score
 
 
 def split_dataframe(df, chunk_size):
@@ -15,27 +19,33 @@ def split_dataframe(df, chunk_size):
     return chunks
 
 
+start = dt.datetime.now()
 # 82247180 Zeilen in raw1.xyz
 raw_df = pd.read_feather('raw.feather')
 comb_df = pd.read_feather('together_combined.feather')
 
+outlier = pd.DataFrame(columns=['outlier'])
+outlier['outlier'] = comb_df['outlier']
+comb_df.drop(['index', 'outlier'], axis=1, inplace=True)
 splitted = split_dataframe(comb_df, 1000)
-
 lof_df = pd.DataFrame()
 iqr_df = pd.DataFrame()
 ifor_df = pd.DataFrame()
 svm_df = pd.DataFrame()
 
-#for k in range(5):
+#for k in range(3):
 for k in range(len(splitted)-1):
+#for filename in os.scandir('result'):
+#    print(pd.read_feather(filename))
+#    k = pd.read_feather(filename)
     print(k)
-    one = loOuFa1(splitted[k])
+    one = lof(splitted[k])
     lof_df = pd.concat([lof_df, one])
 
     two = IQR_Method(splitted[k])
     iqr_df = pd.concat([iqr_df, two])
 
-    three = iforest(splitted[k])
+    three = backup(splitted[k])
     ifor_df = pd.concat([ifor_df, three])
 
     four = oneClassSVM(splitted[k])
@@ -54,7 +64,8 @@ def iqrDF():
 
 
 def iforDF():
-    ifor_high, ifor_low = np.percentile(ifor_df['ifor-Score'], [66, 33])
+    ifor_high = 0.1
+    ifor_low = -0.1
     sec = ifor_df[['ifor-Score', 'ifor-Outlier']].copy()
 
     ifor_conditions = [
@@ -64,12 +75,12 @@ def iforDF():
     ]
     values = ['Likely no Outlier', 'Maybe Outlier', 'Likely an Outlier']
     sec['ifor-Prob'] = np.select(ifor_conditions, values)
-
     return sec
 
 
 def lofDF():
-    lof_high, lof_low = np.percentile(lof_df['lof-Score'], [66, 33])
+    lof_high = 1.2
+    lof_low = 1
     sec = lof_df[['lof-Score', 'lof-Outlier']].copy()
 
     lof_conditions = [
@@ -97,10 +108,30 @@ def svmDF():
     return sec
 
 
+def acualOutlier():
+    sec = outlier.copy()
+    conditions = [
+        (sec['outlier'] <= -1),
+        (sec['outlier'] >= 1)
+    ]
+    values = [' no Outlier', ' an Outlier']
+    sec['actual Outlier'] = np.select(conditions, values)
+    return sec
+    
+    return sec
+
+
 iqr_sec = iqrDF()
 ifor_sec = iforDF()
 lof_sec = lofDF()
 svm_sec = svmDF()
+acual_sec = acualOutlier()
 
-temp4 = iqr_sec.join(ifor_sec).join(lof_sec).join(svm_sec)
+print('iqr-Genauigkeit: ', 100 * accuracy_score(iqr_df['iqr-Outlier'] == -1, acual_sec['outlier'] == -1))
+print('ifor-Genauigkeit: ', 100 * accuracy_score(ifor_sec['ifor-Outlier'] == -1, acual_sec['outlier'] == -1))
+print('lof-Genauigkeit: ', 100 * accuracy_score(lof_sec['lof-Outlier'] == -1, acual_sec['outlier'] == -1))
+print('svm-Genauigkeit: ', 100 * accuracy_score(svm_sec['ocsvm-Outlier'] == -1, acual_sec['outlier'] == -1))
+temp4 = iqr_sec.join(ifor_sec).join(lof_sec).join(svm_sec).join(acual_sec)
 temp4.to_csv('all.csv')
+end = dt.datetime.now()
+print('time it took: ', end - start)

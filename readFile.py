@@ -28,7 +28,7 @@ def read_accepted(link):
         count = 0
         for line in file:
             # Can delete, to look at full dataset.
-            if count >= 100000:
+            if count >= 1000000:
                 break
 
             # Splits every coordinate in each line and cast float.
@@ -54,7 +54,10 @@ rej = read_accepted(r"C:/Users/manue/OneDrive/Desktop/MSM88_Rejected.txt")
 rej['outlier'] = -1
 
 together = pd.concat([acc, rej])
-together = together.sort_values(by=['x'])
-together.reset_index(inplace=True)
+together = together.sort_values(by=['x', 'y'], ascending=[False, False])
+
+together.reset_index(drop=True, inplace=True)
+together['index'] = together.index
+together = together[['index', 'x', 'y', 'z', 'outlier']]
 together.to_feather('together_combined.feather')
 print('done')

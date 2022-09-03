@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.18)  22 AUG 2022 17:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.18)  3 SEP 2022 09:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -815,7 +815,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `document.toc'.
 
-<img/cau-logo-2017.pdf, id=138, 273.14609pt x 91.04816pt>
+<img/cau-logo-2017.pdf, id=98, 273.14609pt x 91.04816pt>
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
 Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 75.
@@ -912,10 +912,28 @@ Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 84.
 ]
 Kapitel 3.
 (kapitel/methodik.tex
-<img/boxplot_example.png, id=168, 462.528pt x 346.896pt>
+<img/Datenüberblick.png, id=132, 252.19218pt x 155.83218pt>
+File: img/Datenüberblick.png Graphic file (type png)
+<use img/Datenüberblick.png>
+Package pdftex.def Info: img/Datenüberblick.png  used on input line 6.
+(pdftex.def)             Requested size: 430.00462pt x 265.70776pt.
+
+Overfull \hbox (0.21829pt too wide) in paragraph at lines 12--14
+\OT1/cmr/m/n/10 Folglich wer-den die Da-ten in Sub-se-quen-zen auf-ge-teilt, mi
+t-tels des-sen dann die Merkmals-Berechnung
+ []
+
+File: img/cau-logo-2017.pdf Graphic file (type pdf)
+<use img/cau-logo-2017.pdf>
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 14.
+(pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
+[3
+
+ <./img/Datenüberblick.png>]
+<img/boxplot_example.png, id=142, 462.528pt x 346.896pt>
 File: img/boxplot_example.png Graphic file (type png)
 <use img/boxplot_example.png>
-Package pdftex.def Info: img/boxplot_example.png  used on input line 7.
+Package pdftex.def Info: img/boxplot_example.png  used on input line 24.
 (pdftex.def)             Requested size: 430.00462pt x 322.51994pt.
 
 
@@ -923,38 +941,65 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 12.
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 29.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
-[3
+[4]
+File: img/cau-logo-2017.pdf Graphic file (type pdf)
+<use img/cau-logo-2017.pdf>
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 39.
+(pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
+ [5 <./img/boxplot_example.png>]
+File: img/cau-logo-2017.pdf Graphic file (type pdf)
+<use img/cau-logo-2017.pdf>
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 54.
+(pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
+ [6]
+File: img/cau-logo-2017.pdf Graphic file (type pdf)
+<use img/cau-logo-2017.pdf>
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 62.
+(pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
+ [7]
+File: img/cau-logo-2017.pdf Graphic file (type pdf)
+<use img/cau-logo-2017.pdf>
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 67.
+(pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
+ [8]
+Overfull \hbox (1.10721pt too wide) in paragraph at lines 71--72
+\OT1/cmr/m/n/10 Um nun ei-ne Pro-zes-s-ana-ly-se der ge-ne-rier-ten Anomalie-Er
+kennungs-Merkmale durch-zuf[]uhren m[]ussen
+ []
 
-]
-File: img/cau-logo-2017.pdf Graphic file (type pdf)
-<use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 22.
-(pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
- [4 <./img/boxplot_example.png>]
-File: img/cau-logo-2017.pdf Graphic file (type pdf)
-<use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 41.
-(pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
- [5]
-File: img/cau-logo-2017.pdf Graphic file (type pdf)
-<use img/cau-logo-2017.pdf>
-Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 51.
-(pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
- [6])
+<img/eventlog.png, id=183, 601.4972pt x 190.46156pt>
+File: img/eventlog.png Graphic file (type png)
+<use img/eventlog.png>
+Package pdftex.def Info: img/eventlog.png  used on input line 74.
+(pdftex.def)             Requested size: 430.00462pt x 136.16443pt.
+<img/Prozessmodell.png, id=185, 748.29562pt x 609.02531pt>
+File: img/Prozessmodell.png Graphic file (type png)
+<use img/Prozessmodell.png>
+Package pdftex.def Info: img/Prozessmodell.png  used on input line 92.
+(pdftex.def)             Requested size: 430.00462pt x 349.9731pt.
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
 Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 87.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
- [7]
+[9 <./img/eventlog.png>]
+File: img/cau-logo-2017.pdf Graphic file (type pdf)
+<use img/cau-logo-2017.pdf>
+Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 87.
+(pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
+ [10 <./img/Prozessmodell.png>]
 Kapitel 4.
 (kapitel/ergebnisse.tex)
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
 Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 90.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
- [8
+ [11
 
 ]
 Kapitel 5.
@@ -963,7 +1008,7 @@ File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
 Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 93.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
- [9
+ [12
 
 ]
 Kapitel 6.
@@ -972,7 +1017,7 @@ File: img/cau-logo-2017.pdf Graphic file (type pdf)
 <use img/cau-logo-2017.pdf>
 Package pdftex.def Info: img/cau-logo-2017.pdf  used on input line 1.
 (pdftex.def)             Requested size: 113.81102pt x 37.93709pt.
- [10
+ [13
 
 ])
 File: img/cau-logo-2017.pdf Graphic file (type pdf)
@@ -989,13 +1034,13 @@ l.99 \end{document}
 
 ] (document.aux)
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 9749D4A73C7D8C8FEE3C227E048D538D;3054.
+(rerunfilecheck)             Checksum: 6F3350A4ED72B224A45A4636320A0D17;2263.
  ) 
 Here is how much of TeX's memory you used:
- 23790 strings out of 478659
- 463412 string characters out of 2845920
- 748163 words of memory out of 3000000
- 41434 multiletter control sequences out of 15000+600000
+ 23821 strings out of 478659
+ 464010 string characters out of 2845920
+ 746305 words of memory out of 3000000
+ 41450 multiletter control sequences out of 15000+600000
  409578 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,104p,891b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1007,9 +1052,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/manue/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/manue/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on document.pdf (14 pages, 161148 bytes).
+Output written on document.pdf (17 pages, 397751 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
- 223 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 265 PDF objects out of 1000 (max. 8388607)
+ 58 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 
