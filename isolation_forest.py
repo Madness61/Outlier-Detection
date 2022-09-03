@@ -41,6 +41,9 @@ def iforest(old_df):
 def backup(old_df):
     df = old_df.copy()
     outlier = len(df[df['outlier'] == -1]) / 1000
+    if outlier >= 0.5:
+        outlier = 0.5
+
     model = IsolationForest(random_state=0, contamination=outlier)
     model.fit(df)
     pred = model.predict(df)

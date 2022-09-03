@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from pyproj import Proj
 import pyarrow
+import datetime as dt
 
 
 def read_file():
@@ -43,21 +44,24 @@ def read_accepted(link):
     return result
 
 
-raw = read_file()
-raw = raw.sort_values(by=['x'])
-raw.reset_index(inplace=True)
-raw.to_feather('raw.feather')
+def getFile():
+    raw = read_file()
+    raw = raw.sort_values(by=['x'])
+    raw.reset_index(inplace=True)
+    raw.to_feather('raw.feather')
 
-acc = read_accepted(r"C:/Users/manue/OneDrive/Desktop/MSM88_Accepted.txt")
-acc['outlier'] = 1
-rej = read_accepted(r"C:/Users/manue/OneDrive/Desktop/MSM88_Rejected.txt")
-rej['outlier'] = -1
+    acc = read_accepted(r"C:/Users/manue/OneDrive/Desktop/MSM88_Accepted.txt")
+    acc['outlier'] = 1
+    rej = read_accepted(r"C:/Users/manue/OneDrive/Desktop/MSM88_Rejected.txt")
+    rej['outlier'] = -1
 
-together = pd.concat([acc, rej])
-together = together.sort_values(by=['x', 'y'], ascending=[False, False])
+    together = pd.concat([acc, rej])
+    together.reset_index(drop=True, inplace=True)
+    together = together.sort_values(by=['x'], ascending=False)
+    together.reset_index(drop=True, inplace=True)
 
-together.reset_index(drop=True, inplace=True)
-together['index'] = together.index
-together = together[['index', 'x', 'y', 'z', 'outlier']]
-together.to_feather('together_combined.feather')
-print('done')
+    together['index'] = together.index
+    together = together[['index', 'x', 'y', 'z', 'outlier']]
+    together.to_feather('together_combined.feather')
+    print('done')
+    return together

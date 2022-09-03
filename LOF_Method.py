@@ -10,6 +10,8 @@ def lof(old_df):
     df = old_df.copy()
 
     outlier = len(df[df['outlier'] == -1]) / 1000
+    if outlier >= 0.5:
+        outlier = 0.5
     model = LocalOutlierFactor(n_neighbors=5, novelty=True, contamination=outlier)
     model.fit(df.values)
     outlier = model.predict(df)
