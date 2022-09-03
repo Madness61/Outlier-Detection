@@ -9,8 +9,7 @@ import pandas as pd
 
 def oneClassSVM(df_old):
     df = df_old.copy()
-    svm = OneClassSVM(kernel="rbf", gamma='auto')
-    svm.fit(df)
+    svm = OneClassSVM(nu=0.01, kernel="rbf", gamma='scale').fit(df)
     pred = svm.predict(df)
     scores = svm.score_samples(df)
 

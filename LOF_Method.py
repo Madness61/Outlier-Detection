@@ -9,7 +9,8 @@ import pandas as pd
 def lof(old_df):
     df = old_df.copy()
 
-    model = LocalOutlierFactor(n_neighbors=5, metric="manhattan",novelty=True)
+    outlier = len(df[df['outlier'] == -1]) / 1000
+    model = LocalOutlierFactor(n_neighbors=5, novelty=True, contamination=outlier)
     model.fit(df.values)
     outlier = model.predict(df)
     score = model.negative_outlier_factor_

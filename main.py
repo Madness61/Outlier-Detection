@@ -24,17 +24,16 @@ start = dt.datetime.now()
 raw_df = pd.read_feather('raw.feather')
 comb_df = pd.read_feather('together_combined.feather')
 
-outlier = pd.DataFrame(columns=['outlier'])
-outlier['outlier'] = comb_df['outlier']
-comb_df.drop(['index', 'outlier'], axis=1, inplace=True)
 splitted = split_dataframe(comb_df, 1000)
+
+
 lof_df = pd.DataFrame()
 iqr_df = pd.DataFrame()
 ifor_df = pd.DataFrame()
 svm_df = pd.DataFrame()
 
-#for k in range(3):
-for k in range(len(splitted)-1):
+for k in range(10):
+#for k in range(len(splitted)-1):
 #for filename in os.scandir('result'):
 #    print(pd.read_feather(filename))
 #    k = pd.read_feather(filename)
@@ -109,7 +108,7 @@ def svmDF():
 
 
 def acualOutlier():
-    sec = outlier.copy()
+    sec = comb_df[['outlier']].copy()
     conditions = [
         (sec['outlier'] <= -1),
         (sec['outlier'] >= 1)
@@ -127,10 +126,10 @@ lof_sec = lofDF()
 svm_sec = svmDF()
 acual_sec = acualOutlier()
 
-print('iqr-Genauigkeit: ', 100 * accuracy_score(iqr_df['iqr-Outlier'] == -1, acual_sec['outlier'] == -1))
-print('ifor-Genauigkeit: ', 100 * accuracy_score(ifor_sec['ifor-Outlier'] == -1, acual_sec['outlier'] == -1))
-print('lof-Genauigkeit: ', 100 * accuracy_score(lof_sec['lof-Outlier'] == -1, acual_sec['outlier'] == -1))
-print('svm-Genauigkeit: ', 100 * accuracy_score(svm_sec['ocsvm-Outlier'] == -1, acual_sec['outlier'] == -1))
+print('iqr-Genauigkeit: ', 100 * accuracy_score(iqr_df['iqr-Outlier'] == -1, iqr_df['outlier'] == -1))
+print('ifor-Genauigkeit: ', 100 * accuracy_score(ifor_sec['ifor-Outlier'] == -1, iqr_df['outlier'] == -1))
+print('lof-Genauigkeit: ', 100 * accuracy_score(lof_sec['lof-Outlier'] == -1, iqr_df['outlier'] == -1))
+print('svm-Genauigkeit: ', 100 * accuracy_score(svm_sec['ocsvm-Outlier'] == -1, iqr_df['outlier'] == -1))
 temp4 = iqr_sec.join(ifor_sec).join(lof_sec).join(svm_sec).join(acual_sec)
 temp4.to_csv('all.csv')
 end = dt.datetime.now()

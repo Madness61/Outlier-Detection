@@ -38,28 +38,16 @@ def iforest(old_df):
 
 
 
-def backup(df):
-    new_df = df.copy()
-    z = new_df[['z']].values
-    model = IsolationForest()
-    model.fit(new_df)
-    pred = model.predict(new_df)
-    new_df['ifor-Score'] = model.decision_function(new_df)
-    new_df['ifor-Outlier'] = pred
-    import plotly.express as px
-    anomalies = new_df[new_df['ifor-Outlier'] == -1]
-    # importing the plot
-    import plotly.graph_objects as go
-    # importing the module
-    import seaborn as sns
-
-    # setting the size of plotting
-    sns.set(rc={'figure.figsize': (8, 4)})
-
-    # plotting bar plot
-    sns.countplot(new_df['ifor-Outlier'])
-    plt.show()
-    return new_df
+def backup(old_df):
+    df = old_df.copy()
+    outlier = len(df[df['outlier'] == -1]) / 1000
+    model = IsolationForest(random_state=0, contamination=outlier)
+    model.fit(df)
+    pred = model.predict(df)
+    scores = model.decision_function(df)
+    df['ifor-Outlier'] = pred
+    df['ifor-Score'] = scores
+    return df
 
     #X_explain = X_test
     #shap_values = shap.TreeExplainer(clf).shap_values(X_explain)
