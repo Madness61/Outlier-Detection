@@ -25,7 +25,9 @@
 \contentsline {paragraph}{Aktivität}{9}{section*.13}%
 \contentsline {paragraph}{Zeitstempel}{9}{section*.14}%
 \contentsline {paragraph}{Ressource}{9}{section*.15}%
-\contentsline {subsection}{\numberline {3.3.2}Analyse der Eventlogs}{9}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Ergebnisse}{11}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Diskussion}{12}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Fazit}{13}{chapter.6}%
+\contentsline {chapter}{\numberline {4}Ergebnisse}{10}{chapter.4}%
+\contentsline {subsection}{\numberline {4.0.1}Analyse der Eventlogs}{10}{subsection.4.0.1}%
+\contentsline {subsection}{\numberline {4.0.2}Analyse der Methoden?}{12}{subsection.4.0.2}%
+\contentsline {subsection}{\numberline {4.0.3}Nutzen von Backpropagationzur Kantengewicht-Bestimmung?}{12}{subsection.4.0.3}%
+\contentsline {chapter}{\numberline {5}Diskussion}{13}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Fazit}{14}{chapter.6}%
