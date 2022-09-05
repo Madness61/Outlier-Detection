@@ -1,4 +1,5 @@
 import datetime as dt
+
 import pandas as pd
 
 from eveltlogGenerater import getEventlog
@@ -7,11 +8,14 @@ from readFile import getFile
 
 start = dt.datetime.now()
 
-comb_df = getFile()
-#comb_df = pd.read_feather('together_combined.feather')
+#comb_df = getFile()
+#comb_df.to_feather('together_combined.feather')
+comb_df = pd.read_feather('together_combined.feather')
+#comb_df.to_csv('../bla.csv')
 
 all_df = calcFeature(comb_df)
-#temp4.to_csv('all.csv')
+print(all_df.columns)
+all_df.to_csv('../all.csv')
 
 eventlog = getEventlog(comb_df, all_df)
 eventlog.to_csv('../eventlog.csv')

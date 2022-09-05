@@ -1,8 +1,6 @@
 import pandas as pd
-import numpy as np
 from pyproj import Proj
-import pyarrow
-import datetime as dt
+
 
 
 def read_file():
@@ -23,15 +21,15 @@ def read_file():
     return pd.DataFrame(data=lst, columns=['x', 'y', 'z'])
 
 
-def read_accepted(link):
+def read_accepted(link, limit):
     lst = []
     with open(link) as file:
         count = 0
         for line in file:
             # Can delete, to look at full dataset.
-            if count >= 1000000:
+            if count >= limit:
                 break
-
+            print(count)
             # Splits every coordinate in each line and cast float.
             xyz = [float(x) for x in line.split(";")]
             lst.append(xyz)
@@ -48,11 +46,11 @@ def getFile():
     raw = read_file()
     raw = raw.sort_values(by=['x'])
     raw.reset_index(inplace=True)
-    raw.to_feather('raw.feather')
+    #raw.to_feather('raw.feather')
 
-    acc = read_accepted(r"C:/Users/manue/OneDrive/Desktop/MSM88_Accepted.txt")
+    acc = read_accepted(r"../MSM88_Accepted.txt", 830000)
     acc['outlier'] = 1
-    rej = read_accepted(r"C:/Users/manue/OneDrive/Desktop/MSM88_Rejected.txt")
+    rej = read_accepted(r"../MSM88_Rejected.txt", 190000)
     rej['outlier'] = -1
 
     together = pd.concat([acc, rej])
@@ -62,6 +60,5 @@ def getFile():
 
     together['index'] = together.index
     together = together[['index', 'x', 'y', 'z', 'outlier']]
-    together.to_feather('together_combined.feather')
-    print('done')
+    print('Data read')
     return together

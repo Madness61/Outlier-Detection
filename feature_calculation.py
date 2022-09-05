@@ -53,7 +53,8 @@ def calcFeature(comb_df):
     print('ifor-Genauigkeit: ', 100 * accuracy_score(iqr_df['outlier'] == -1, ifor_sec['ifor-Outlier'] == -1))
     print('lof-Genauigkeit: ', 100 * accuracy_score(iqr_df['outlier'] == -1, lof_sec['lof-Outlier'] == -1))
     print('svm-Genauigkeit: ', 100 * accuracy_score(iqr_df['outlier'] == -1, svm_sec['ocsvm-Outlier'] == -1))
-    temp4 = iqr_sec.join(ifor_sec).join(lof_sec).join(svm_sec).join(acual_sec)
+    comb_df.drop(['outlier'], axis=1, inplace=True)
+    temp4 = comb_df.join(iqr_sec).join(ifor_sec).join(lof_sec).join(svm_sec).join(acual_sec)
     return temp4
 
 
@@ -63,14 +64,14 @@ def iqrDF(iqr_df):
         (sec['iqr-Outlier'] <= -1),
         (sec['iqr-Outlier'] >= 1)
     ]
-    values = ['Likely no Outlier', 'Likely an Outlier']
+    values = ['no Outlier', 'an Outlier']
     sec['iqr-Prob'] = np.select(conditions, values)
     return sec
 
 
 def iforDF(ifor_df):
-    ifor_high = 0.2
-    ifor_low = -0.2
+    ifor_high = 0.1
+    ifor_low = -0.1
     sec = ifor_df[['ifor-Score', 'ifor-Outlier']].copy()
 
     ifor_conditions = [
@@ -78,7 +79,7 @@ def iforDF(ifor_df):
         (sec['ifor-Score'] >= ifor_low) & (sec['ifor-Score'] < ifor_high),
         (sec['ifor-Score'] >= ifor_high)
     ]
-    values = ['Likely no Outlier', 'Maybe Outlier', 'Likely an Outlier']
+    values = ['no Outlier', 'Maybe Outlier', 'an Outlier']
     sec['ifor-Prob'] = np.select(ifor_conditions, values)
     return sec
 
@@ -93,7 +94,7 @@ def lofDF(lof_df):
         (sec['lof-Score'] >= lof_low) & (sec['lof-Score'] < lof_high),
         (sec['lof-Score'] >= lof_high)
     ]
-    values = ['Likely no Outlier', 'Maybe Outlier', 'Likely an Outlier']
+    values = ['no Outlier', 'Maybe Outlier', 'an Outlier']
     sec['lof-Prob'] = np.select(lof_conditions, values)
 
     return sec
@@ -108,7 +109,7 @@ def svmDF(svm_df):
         (sec['ocsvm-Score'] >= svm_low) & (sec['ocsvm-Score'] < svm_high),
         (sec['ocsvm-Score'] >= svm_high)
     ]
-    values = ['likely no Outlier', 'Maybe Outlier', 'Likely an Outlier']
+    values = ['no Outlier', 'Maybe Outlier', 'an Outlier']
     sec['svm-Prob'] = np.select(svm_conditions, values)
     return sec
 
@@ -119,7 +120,7 @@ def acualOutlier(comb_df):
         (sec['outlier'] <= -1),
         (sec['outlier'] >= 1)
     ]
-    values = [' no Outlier', ' an Outlier']
+    values = ['no Outlier', 'an Outlier']
     sec['actual Outlier'] = np.select(conditions, values)
     return sec
 

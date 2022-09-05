@@ -3,8 +3,6 @@ import datetime as dt
 
 
 def getEventlog(comb_df, all_df):
-    print(comb_df)
-    print(all_df)
     #comb_df = pd.read_feather('together_combined.feather')
     #all_df = pd.read_csv('../all.csv')
     eventlog = pd.DataFrame(columns=['CaseID', 'Timestamp', 'Activity', 'Resource'])
