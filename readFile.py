@@ -18,7 +18,7 @@ def read_file():
             lst.append(xyz)
             count = count + 1
     file.close()
-    return pd.DataFrame(data=lst, columns=['x', 'y', 'z'])
+    return pd.DataFrame(data=lst, columns=['lon', 'lat', 'depth'])
 
 
 def read_accepted(link, limit):
@@ -35,30 +35,30 @@ def read_accepted(link, limit):
             lst.append(xyz)
             count = count + 1
     file.close()
-    df = pd.DataFrame(data=lst, columns=['x', 'y', 'z'])
+    df = pd.DataFrame(data=lst, columns=['lon', 'lat', 'depth'])
     accepted = Proj(proj="utm", zone=26, ellps="WGS84", perserve_units=False)
-    df['x'], df['y'] = accepted(df['x'].values, df['y'].values, inverse=True)
-    result = df.loc[:, ['x', 'y', 'z']]
+    df['lon'], df['lat'] = accepted(df['lon'].values, df['lat'].values, inverse=True)
+    result = df.loc[:, ['lon', 'lat', 'depth']]
     return result
 
 
 def getFile():
     raw = read_file()
-    raw = raw.sort_values(by=['x'])
+    raw = raw.sort_values(by=['lon'])
     raw.reset_index(inplace=True)
     #raw.to_feather('raw.feather')
 
     acc = read_accepted(r"../MSM88_Accepted.txt", 830000)
     acc['outlier'] = 1
-    rej = read_accepted(r"../MSM88_Rejected.txt", 190000)
+    rej = read_accepted(r"../MSM88_Rejected.txt", 170000)
     rej['outlier'] = -1
 
     together = pd.concat([acc, rej])
     together.reset_index(drop=True, inplace=True)
-    together = together.sort_values(by=['x'], ascending=False)
+    together = together.sort_values(by=['lon'], ascending=False)
     together.reset_index(drop=True, inplace=True)
 
     together['index'] = together.index
-    together = together[['index', 'x', 'y', 'z', 'outlier']]
+    together = together[['index', 'lon', 'lat', 'depth', 'outlier']]
     print('Data read')
     return together

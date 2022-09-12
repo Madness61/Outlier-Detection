@@ -1,18 +1,19 @@
-import numpy as np
-from sklearn.compose import make_column_transformer
-from sklearn.metrics import accuracy_score
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import OneClassSVM, SVC
-import pandas as pd
+from sklearn.svm import OneClassSVM
 
 
 def oneClassSVM(df_old):
     df = df_old.copy()
-    svm = OneClassSVM(kernel='rbf', gamma=0.001, nu=0.02).fit(df)
-    pred = svm.predict(df)
-    scores = svm.score_samples(df)
 
-    df['ocsvm-Score'] = scores
-    df['ocsvm-Outlier'] = pred
+    outlier = len(df[df['outlier'] == -1]) / len(df)
+    if outlier >= 0.5:
+        outlier = 0.5
+    if outlier <= 0:
+        outlier = 0
+
+    svm = OneClassSVM(kernel='rbf', gamma=0.001, nu=outlier).fit(df[['lon', 'lat', 'depth']].values)
+    pred = svm.predict(df[['lon', 'lat', 'depth']].values)
+    scores = svm.decision_function(df[['lon', 'lat', 'depth']].values)
+
+    df['svm-Score'] = scores
+    df['svm-Outlier'] = pred
     return df

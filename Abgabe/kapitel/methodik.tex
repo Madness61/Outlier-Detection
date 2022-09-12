@@ -16,7 +16,7 @@ Folglich werden die Daten in Subsequenzen aufgeteilt, mittels dessen dann die Me
 \section{Datenverarbeitung}
 \subsection{Statistische Merkmale}
 \subsubsection{Interquartilsabstand}
-Der Interquartilsabstand (im folgenden mit IQR angekürzt) ist ein Streuungsmaß, welcher in statistischen Analysen dabei hilft, durch Verteilungen Rückschlüsse über einen Datensatz zu ziehen. Visuell werden diese meist durch einen Boxplot dargestellt, welche zu den am weitesten verbreiteten Werkzeugen in der statistischen Praxis, insbesondere in der Phase der explorativen Datenanalyse \cite{dovoedoBoxplotBasedOutlierDetection2015}.
+Der Interquartilsabstand (im folgenden mit IQR angekürzt) ist ein Streuungsmaß, welcher in statistischen Analysen dabei hilft, durch Verteilungen Rückschlüsse über einen Datensatz zu ziehen. Visuell werden diese meist durch einen Boxplot dargestellt, welche zu den am weitesten verbreiteten Werkzeugen in der statistischen Praxis, insbesondere in der Phase der explorativen Datenanalyse gehört \cite{dovoedoBoxplotBasedOutlierDetection2015}.
 \paragraph{Funktionsweise}
 Zunächst wird das erste und das dritte Quartil berechnet. Der IQR bildet sich nun aus der Differenz des der beiden Quartile, also IQR = Quartil 3 - Quartil 1. Um dies als graphische Repräsentation zu verdeutlichen zeigt Grafik \ref{fig:boxplot_example} einen Boxplot, welcher die 'z'-Koordinate der ersten 1000 Messdaten veranschaulicht. Der IQR lässt sich nun durch die blau eingefärbte Fläche zeigen, welche 50 Prozent der Messdaten enthält. Alle Messwerte, welche außerhalb oberen und unteren Grenze liegen, lassen sich nun als potenzielle Outlier identifizieren. Diese Grenzen werden typischerweise auf das 1,5-fache des IQR gesetzt. Die untere Grenze lässt sich also durch Quartil 1 - (1.5 * IQR) und die obere Grenze durch Quartil 3 + (1.5 * IQR) berechnen \cite{vinuthaDetectionOutliersUsing2018}. 
 
@@ -40,6 +40,7 @@ Bevor die Methodik angewendet werden kann muss der Datensatz angepasst werden. D
 
 \subsection{Tiefenbasierende Merkmale}
 https://hands-on.cloud/using-python-and-isolation-forest-algorithm-for-anomalies-detection/
+Basiert auf Entscheidungsbaum und Random Forest.
 \subsubsection{Isolation Forest}
 Um Anomalien in Datensätzen zu erkennen werden meist erst normale Instanzen profiliert, anhand deren man dann nicht übereinstimmende Instanzen als Anomalien zu identifizieren \cite{liuIsolationForest2008}. Der Isolation Forest konzentriert sich hingegen auf das Erkennen der Anomalien selbst, indem es zunutze nimmt, dass Anomalien 1) die Minderheit des Datensatzes sind, und 2) sich die Attributwerte stark von denen normaler Instanzen unterscheidet. Sie sind somit "wenig und unterschiedlich"\cite{liuIsolationForest2008}. Isolation Forests basieren wie Random Forests auf Entscheidungsbäumen \colorbox{yellow}{QUELLE}. Und da es hier keine vordefinierten Labels gibt, handelt es sich um ein unüberwachtes Modell \colorbox{yellow}{QUELLE}.
 \paragraph{Funktionsweise}
