@@ -1,9 +1,11 @@
-import math
 import time
 import sys
 import pandas as pd
 import numpy as np
 
+
+# Versuch des Moving-Window-Ansatzes. Wurde schlussendlich verworfen, da die Bedingung der Boundaries
+# aus unerfindlichen Gründen nur leere Dataframes erzeugten.
 
 upperBorderMultiplicator = 1.2
 windowRadius = 1
@@ -18,14 +20,6 @@ globalEndIndex = 20000
 step = 5000
 startIndex = globalStartIndex
 endIndex = startIndex + step
-
-
-#Hier noch eine Quelle einfügen. Haversine Vectorized...
-def calculateWindow(lon1, lat1, dataFrame, radius):
-    return dataFrame[6371 * 2 * np.arcsin(np.sqrt(
-        np.sin((np.radians(dataFrame['y']) - math.radians(lat1)) / 2) ** 2 + math.cos(
-            math.radians(lat1)) * np.cos(np.radians(dataFrame['y'])) * np.sin(
-            (np.radians(dataFrame['x']) - math.radians(lon1)) / 2) ** 2)) < radius]
 
 
 def getBoundariesForIndex(lowerIndex, upperIndex):

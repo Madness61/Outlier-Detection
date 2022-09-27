@@ -2,9 +2,9 @@ import pandas as pd
 import datetime as dt
 
 
+# Funktion erstellt Eventlogs. Jede Methode erstellt Eventlogs für die eigenen Ergebnisse. Anschließend werden diese
+# zusammengefügt.
 def getEventlog(comb_df, all_df):
-    #comb_df = pd.read_feather('together_combined.feather')
-    #all_df = pd.read_csv('../all.csv')
 
     x = comb_df['lon'].astype(str)
     y = comb_df['lat'].astype(str)
@@ -37,12 +37,11 @@ def getEventlog(comb_df, all_df):
     el_iqr['Resource'] = 'IQR: ' + all_df['iqr-Outlier'].astype(str)
     el_actual['Resource'] = 'actual Outlier: ' + all_df['outlier'].astype(str)
 
+    # Zusammenfügen der Eventlogs der einzelnen Methoden.
     eventlog = el_iqr.append(el_lof).append(el_ifor).append(el_svm).append(el_actual)
 
-    # For Timestamp
+    # Zeitstempel wird auf 01.01.2000 - 00:00Uhr gesetzt und für jeden weiteren Eventlog um 1S erhöht.
     startdate = dt.datetime(2000, 1, 1, 0, 0, 0)
     eventlog['Timestamp'] = pd.date_range(startdate, periods=len(eventlog), freq='1S')
-
-    #eventlog = eventlog.sort_values(by=['CaseID'])
     eventlog.reset_index(inplace=True)
     return eventlog
