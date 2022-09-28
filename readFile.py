@@ -46,6 +46,7 @@ step = 1000000
 startIndex = globalStartIndex
 endIndex = startIndex + step
 
+# Iteriert durch 1.000.000er Blocks und speichert Ergebnisse ab.
 while startIndex <= globalEndIndex:
 
     df = fr.loc[(fr['index'] >= startIndex) & (fr['index'] <= endIndex-1)]

@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a916a39e-e119-4785-b2c4-ee5f7fe2a1b1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Abgabe/kapitel/methodik.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Abgabe/kapitel/methodik.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boxplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Boxplot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IQR_Method.py" beforeDir="false" afterPath="$PROJECT_DIR$/IQR_Method.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LOF_Method.py" beforeDir="false" afterPath="$PROJECT_DIR$/LOF_Method.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OneClassSVM.py" beforeDir="false" afterPath="$PROJECT_DIR$/OneClassSVM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eveltlogGenerater.py" beforeDir="false" afterPath="$PROJECT_DIR$/eveltlogGenerater.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature_calculation.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_calculation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/isolation_forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/isolation_forest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/readFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/together_combined.feather" beforeDir="false" afterPath="$PROJECT_DIR$/together_combined.feather" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,15 +214,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="svm_Maybe" language="Python" />

@@ -12,6 +12,7 @@ def iforest(old_df):
     if outlier <= 0:
         outlier = 0
 
+    # contamination-Score gibt Prozentanteil an Outliern an.
     model = IsolationForest(contamination=outlier)
     model.fit(df[['lon', 'lat', 'depth']].values)
     pred = model.predict(df[['lon', 'lat', 'depth']].values)
